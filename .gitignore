@@ -1,0 +1,38 @@
+# compiled output
+/dist
+/node_modules
+
+# logs
+yarn-error.log
+npm-debug.log*
+yarn-debug.log*
+
+# os
+.DS_Store
+Thumbs.db
+
+# env
+.env
+.env.production
+.env.development
+.env.test
+
+# editor
+.vscode
+.idea
+*.swp
+*.swo
+
+# testing output
+coverage
+e2e/test-results
+test-results
+
+# Project specific sensitive data / large files
+responses_*.json
+responses_public.json
+responses_private.json
+responses_reset.json
+
+# NestJS build
+tsconfig.tsbuildinfo

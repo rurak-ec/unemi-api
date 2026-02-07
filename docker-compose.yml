@@ -14,11 +14,9 @@ services:
     environment:
       - NODE_ENV=production
       - PORT=${PORT:-3000}
+      - REDIS_URL=redis://redis:6379
       - DOCKER_ENV=true
       - TZ=America/Guayaquil
-
-    env_file:
-      - .env
 
     volumes:
       - ./data:/app/data

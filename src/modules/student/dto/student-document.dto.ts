@@ -1,4 +1,4 @@
-import { IsString, IsNotEmpty, IsOptional } from 'class-validator';
+import { IsString, IsNotEmpty, IsOptional, IsBoolean } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class StudentDocumentDto {
@@ -11,4 +11,9 @@ export class StudentDocumentDto {
     @IsOptional()
     @IsString()
     password?: string;
+
+    @ApiProperty({ example: false, description: 'Attempt password reset if login fails', required: false })
+    @IsOptional()
+    @IsBoolean() // Should import IsBoolean
+    reset_password?: boolean;
 }

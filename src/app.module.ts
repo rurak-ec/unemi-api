@@ -4,8 +4,6 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import Keyv from 'keyv';
 import KeyvRedis from '@keyv/redis';
 import configuration from './config/configuration';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
 import { HealthModule } from './modules/health/health.module';
 import { HttpClientModule } from './modules/http-client/http-client.module';
 import { StudentModule } from './modules/student/student.module';
@@ -39,7 +37,5 @@ import { StudentModule } from './modules/student/student.module';
       },
     }),
   ],
-  controllers: [AppController],
-  providers: [AppService],
 })
 export class AppModule { }
